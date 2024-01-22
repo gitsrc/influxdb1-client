@@ -276,6 +276,14 @@ func (bp *batchpoints) Points() []*Point {
 	return bp.points
 }
 
+func (bp *batchpoints) ClearPoints() {
+	bp.points = bp.points[0:0]
+}
+
+func (bp *batchpoints) GetPointsNum() int {
+	return len(bp.points)
+}
+
 func (bp *batchpoints) Precision() string {
 	return bp.precision
 }
