@@ -217,6 +217,11 @@ type BatchPoints interface {
 	AddPoints(ps []*Point)
 	// Points lists the points in the Batch.
 	Points() []*Point
+	// ClearPoints clear all points
+	ClearPoints()
+
+	//ClearPoints get the number of Point
+	GetPointsNum() int
 
 	// Precision returns the currently set precision of this Batch.
 	Precision() string
